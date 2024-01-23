@@ -5,6 +5,11 @@ edition = "2021"
 repository = "https://github.com/bichanna/protecterm"
 
 [dependencies]
+crossterm = "0.27.0"
+localauthentication-rs = "0.1.0"
+nokhwa = { version = "0.10.4", features = ["input-native"] }
+ratatui = "0.25.0"
+tui-big-text = "0.3.2"
 
 # The profile that 'cargo dist' will build with
 [profile.dist]
