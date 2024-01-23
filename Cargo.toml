@@ -1,9 +1,8 @@
 [package]
 name = "protecterm"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+repository = "https://github.com/bichanna/protecterm"
 
 [dependencies]
 
@@ -17,6 +16,14 @@ lto = "thin"
 # The preferred cargo-dist version to use in CI (Cargo.toml SemVer syntax)
 cargo-dist-version = "0.8.0"
 # The installers to generate for each app
-installers = ["msi"]
+installers = ["shell", "homebrew"]
 # Target platforms to build apps for (Rust target-triple syntax)
 targets = ["aarch64-apple-darwin", "x86_64-apple-darwin"]
+# CI backends to support
+ci = ["github"]
+# A GitHub repo to push Homebrew formulas to
+tap = "bichana/homebrew-protecterm"
+# Publish jobs to run in CI
+publish-jobs = ["homebrew"]
+# Publish jobs to run in CI
+pr-run-mode = "plan"
